@@ -55,5 +55,5 @@ func trace(cmd string) string {
 // a shell command (or entire script)
 func encode(script []byte) string {
 	encoded := base64.StdEncoding.EncodeToString(script)
-	return fmt.Sprintf("echo %s | base64 -d | /bin/sh", encoded)
+	return fmt.Sprintf("echo %s | base64 -d | /usr/bin/msys2-shell", encoded)
 }
