@@ -1,6 +1,6 @@
 package parser
 
-import "github.com/drone/drone-exec/yaml"
+import "github.com/fracting/drone-exec/yaml"
 
 // NodeType identifies the type of a parse tree node.
 type NodeType uint
