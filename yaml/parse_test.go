@@ -38,7 +38,7 @@ func TestParse(t *testing.T) {
 		})
 
 		g.It("Should parse build shell", func() {
-			g.Assert(conf.Build.Slice()[0].Shell).Equal("test_shell")
+			g.Assert(conf.Build.Slice()[0].Shell).Equal("/bin/sh")
 		})
 
 		g.It("Should parse volume configuration", func() {
@@ -148,7 +148,7 @@ build:
   commands:
     - go build
     - go test
-  shell: test_shell
+  shell: /bin/sh
   volumes:
     - /tmp/volumes
   net: bridge
