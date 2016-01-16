@@ -2,6 +2,7 @@ package script
 
 import (
 	"bytes"
+        "fmt"
 
 	"github.com/drone/drone-exec/parser"
 	"github.com/drone/drone-plugin-go/plugin"
@@ -31,6 +32,8 @@ func Encode(w *plugin.Workspace, c *dockerclient.ContainerConfig, n *parser.Dock
 	buf.WriteString(writeCmds(n.Commands))
 	buf.WriteString(teardownScript)
 
+        fmt.Printf("haha test\n")
+        fmt.Printf("%s\n", c.Build.Slice()[0].Shell)
 	c.Entrypoint = entrypoint
 	c.Cmd = []string{encode(buf.Bytes())}
 }
