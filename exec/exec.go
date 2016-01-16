@@ -233,7 +233,7 @@ func Exec(payload Payload, opt Options, outw, errw io.Writer) error {
 		}
 	}
 	if opt.Build && !state.Failed() {
-		log.Debugln("haha Running Build and Compose steps")
+		log.Debugln("Running Build and Compose steps")
 		err = r.RunNode(state, parser.NodeCompose|parser.NodeBuild)
 		if err != nil {
 			log.Debugln(err)
