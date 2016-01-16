@@ -27,7 +27,7 @@ publish:
     username: fracting
     password: $$DOCKER_PASS
     email: $$DOCKER_EMAIL
-    repo: fracting/drone
+    repo: fracting/drone-exec
     tag:
       - "latest"
       - "0.4"
