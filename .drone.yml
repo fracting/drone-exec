@@ -12,3 +12,26 @@ build:
     - go get ./...
     - go test ./...
     - go build
+
+notify:
+  irc:
+    prefix: build
+    nick: drone-exec
+    channel: wine-zh
+    server:
+      host: chat.freenode.net
+      port: 6667
+
+publish:
+  docker:
+    username: fracting
+    password: $$DOCKER_PASS
+    email: $$DOCKER_EMAIL
+    repo: fracting/drone
+    tag:
+      - "latest"
+      - "0.4"
+    when:
+      repo: fracting/drone-exec
+      branch: master
+
