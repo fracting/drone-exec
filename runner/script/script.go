@@ -30,7 +30,7 @@ func Encode(w *plugin.Workspace, c *dockerclient.ContainerConfig, n *parser.Dock
 	}
 
         if len(n.Shell) > 0 {
-		buf.WriteString(fmt.Sprintf("%s << EOF", n.Shell))
+		buf.WriteString(fmt.Sprintf("%s << \"EOF\"", n.Shell))
         }
 
 	buf.WriteString(writeCmds(n.Commands))
