@@ -33,7 +33,7 @@ func Encode(w *plugin.Workspace, c *dockerclient.ContainerConfig, n *parser.Dock
 	buf.WriteString(teardownScript)
 
         fmt.Printf("haha test\n")
-        fmt.Printf("%s\n", c.Build.Slice()[0].Shell)
+        fmt.Printf("%s\n", n.Shell)
 	c.Entrypoint = entrypoint
 	c.Cmd = []string{encode(buf.Bytes())}
 }
