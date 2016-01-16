@@ -37,8 +37,8 @@ func TestParse(t *testing.T) {
 			g.Assert(conf.Build.Slice()[0].Commands).Equal([]string{"go build", "go test"})
 		})
 
-		g.It("Should parse build commands", func() {
-			g.Assert(conf.Build.Slice()[0].Shell).Equal([]string{"test_shell"})
+		g.It("Should parse build shell", func() {
+			g.Assert(conf.Build.Slice()[0].Shell).Equal("test_shell")
 		})
 
 		g.It("Should parse volume configuration", func() {
