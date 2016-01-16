@@ -1,6 +1,6 @@
 package parser
 
-import "github.com/drone/drone-exec/yaml"
+import "github.com/fracting/drone-exec/yaml"
 
 // Tree is the representation of a parsed build
 // configuraiton Yaml file.
