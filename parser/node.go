@@ -74,7 +74,7 @@ func newDockerNode(typ NodeType, c yaml.Container) *DockerNode {
 		Environment: c.Environment.Slice(),
 		Entrypoint:  c.Entrypoint.Slice(),
 		Command:     c.Command.Slice(),
-                Shell:       c.Shell,
+		Shell:       c.Shell,
 		Volumes:     c.Volumes,
 		ExtraHosts:  c.ExtraHosts,
 		Net:         c.Net,
