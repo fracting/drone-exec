@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/drone/drone-exec/parser"
+	"github.com/fracting/drone-exec/parser"
 	"github.com/drone/drone-plugin-go/plugin"
 	yamljson "github.com/ghodss/yaml"
 	"github.com/samalba/dockerclient"

@@ -5,7 +5,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/drone/drone-exec/parser"
+	"github.com/fracting/drone-exec/parser"
 	"github.com/drone/drone-plugin-go/plugin"
 )
 

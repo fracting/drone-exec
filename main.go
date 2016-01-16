@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/drone/drone-exec/exec"
-	"github.com/drone/drone-exec/yaml"
+	"github.com/fracting/drone-exec/exec"
+	"github.com/fracting/drone-exec/yaml"
 	"github.com/drone/drone-plugin-go/plugin"
 
 	log "github.com/Sirupsen/logrus"

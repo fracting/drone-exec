@@ -4,9 +4,9 @@ import (
 	"errors"
 
 	// log "github.com/Sirupsen/logrus"
-	"github.com/drone/drone-exec/docker"
-	"github.com/drone/drone-exec/parser"
-	"github.com/drone/drone-exec/runner/script"
+	"github.com/fracting/drone-exec/docker"
+	"github.com/fracting/drone-exec/parser"
+	"github.com/fracting/drone-exec/runner/script"
 	"github.com/samalba/dockerclient"
 )
 
