@@ -148,8 +148,7 @@ build:
   commands:
     - go build
     - go test
-  shell:
-    - test_shell
+  shell: test_shell
   volumes:
     - /tmp/volumes
   net: bridge
