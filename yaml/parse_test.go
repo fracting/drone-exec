@@ -37,6 +37,10 @@ func TestParse(t *testing.T) {
 			g.Assert(conf.Build.Slice()[0].Commands).Equal([]string{"go build", "go test"})
 		})
 
+		g.It("Should parse build shell", func() {
+			g.Assert(conf.Build.Slice()[0].Shell).Equal("/bin/sh")
+		})
+
 		g.It("Should parse volume configuration", func() {
 			g.Assert(conf.Build.Slice()[0].Volumes).Equal([]string{"/tmp/volumes"})
 		})
@@ -144,6 +148,7 @@ build:
   commands:
     - go build
     - go test
+  shell: /bin/sh
   volumes:
     - /tmp/volumes
   net: bridge
