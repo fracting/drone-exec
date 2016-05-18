@@ -2,6 +2,7 @@ package script
 
 import (
 	"bytes"
+	"fmt"
 
 	"github.com/drone/drone-exec/parser"
 	"github.com/drone/drone-plugin-go/plugin"
@@ -28,7 +29,16 @@ func Encode(w *plugin.Workspace, c *dockerclient.ContainerConfig, n *parser.Dock
 		))
 	}
 
+	if len(n.Shell) > 0 {
+		buf.WriteString(fmt.Sprintf("%s << \"EOF\"", n.Shell))
+	}
+
 	buf.WriteString(writeCmds(n.Commands))
+
+	if len(n.Shell) > 0 {
+		buf.WriteString("EOF")
+	}
+
 	buf.WriteString(teardownScript)
 
 	c.Entrypoint = entrypoint
