@@ -23,5 +23,5 @@ publish:
     repo: teaci/drone-exec
     tag: [ "testing", "0.4.2.5" ]
     when:
-      repo: TeaCI/drone-exec
+      repo: TeaCI/drone-exec # case sensitive
       branch: [ "master", "0.4.2.5" ]
