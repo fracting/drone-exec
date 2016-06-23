@@ -1,3 +1,5 @@
+clone:
+  path: github.com/fracting/drone-exec
 
 build:
   image: golang:1.5
@@ -15,9 +17,11 @@ build:
 
 publish:
   docker:
-    username: drone
+    username: fracting
     password: $$DOCKER_PASS
     email: $$DOCKER_EMAIL
-    repo: drone/drone-exec
+    repo: fracting/drone-exec
+    tag: [ "testing", "0.4.2t" ]
     when:
-      branch: master
+      repo: fracting/drone-exec
+      branch: [ "master", "custom-shell-20160623-v1" ]
