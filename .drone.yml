@@ -17,9 +17,11 @@ build:
 
 publish:
   docker:
-    username: drone
+    username: $$DOCKER_USER
     password: $$DOCKER_PASS
     email: $$DOCKER_EMAIL
-    repo: drone/drone-exec
+    repo: teaci/drone-exec
+    tag: [ "testing", "0.4.2.5" ]
     when:
-      branch: master
+      repo: TeaCI/drone-exec
+      branch: [ "master", "0.4.2.5" ]
