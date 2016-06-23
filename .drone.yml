@@ -1,5 +1,5 @@
 clone:
-  path: github.com/fracting/drone-exec
+  path: github.com/drone/drone-exec
 
 build:
   image: golang:1.5
