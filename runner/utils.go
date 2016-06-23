@@ -31,6 +31,7 @@ func toContainerConfig(n *parser.DockerNode) *dockerclient.ContainerConfig {
 			CpusetCpus:       n.CPUSetCPUs,
 			MemorySwappiness: -1,
 			OomKillDisable:   n.OomKillDisable,
+			SecurityOpt:      []string{"seccomp=unconfined"},
 		},
 	}
 
