@@ -21,7 +21,7 @@ publish:
     password: $$DOCKER_PASS
     email: $$DOCKER_EMAIL
     repo: teaci/drone-exec
-    tag: [ "testing", "0.4.2.5" ]
+    tag: [ "testing", "0.4.2.6" ]
     when:
       repo: TeaCI/drone-exec # case sensitive
-      branch: [ "master", "0.4.2.5" ]
+      branch: [ "master", "0.4.2.6" ]
